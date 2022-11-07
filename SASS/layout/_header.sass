@@ -1,0 +1,115 @@
+.header
+   position: relative
+   height: 95vh
+   background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../img/bg/header_bg.jpg") center/cover no-repeat
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 87%)
+
+.header__logo
+   position: absolute
+   left: 3rem
+   top: 3rem
+
+.header_content
+   position: absolute
+   left: 50%
+   top: 50%
+   transform: translate(-50%,-50%)
+   width: 100%
+
+.header__title
+   font-weight: 800
+   font-size: 4.5rem
+   line-height: 6rem
+   color: #FFFFFF
+   text-transform: uppercase
+   top: 50%
+   left: 50%
+   width: 100%
+   text-align: center
+   animation: leftToright 2s ease-in-out
+
+.header__subtitle
+   font-weight: 200
+   font-size: 3rem
+   line-height: 4.8rem
+   letter-spacing: .5rem
+   color: #ffffff94
+   text-transform: uppercase
+   width: 100%
+   text-align: center
+   margin-top: 5rem
+   animation: RightToLeft 2s ease-in-out
+
+.btn
+   position: relative
+   color: #777777
+   background: #ffffff
+   text-decoration: none
+   text-transform: uppercase
+   display: block
+   padding: 1.7rem 4rem 1.5rem 4rem
+   border-radius: 5rem
+   text-align: center
+   margin: 0 auto
+   width: 27.7rem
+   height: 5.4rem
+   margin-top: 5.4rem
+   transition: all .3s
+   &:hover
+      transform: translateY(-4px)
+      box-shadow: 0px 4px 4px #222121f1
+      &::after
+         opacity: 0
+         transform: scale(1.6)
+   &:active
+      transform: translateY(-2px)
+      box-shadow: 0px 4px 4px #222121af
+   &::after
+      content: ""
+      background: #ffff
+      width: 27.7rem
+      height: 5.4rem
+      display: block
+      position: absolute
+      border-radius: 5rem
+      z-index: -1
+      top: 0
+      left: 0
+      transition: all 1s
+
+.btn__animation
+   animation: BtnToUp .5s ease-out .8s
+   animation-fill-mode: backwards
+
+   @keyframes leftToright
+      0%
+         opacity: 0
+         transform: translateX(-100px)
+
+      80%
+         transform: translateX(20px)
+
+      100%
+         opacity: 1
+         transform: translateX(0px)
+
+   @keyframes RightToLeft
+      0%
+         opacity: 0
+         transform: translateX(100px)
+
+      80%
+         transform: translateX(-20px)
+
+      100%
+         opacity: 1
+         transform: translateX(0px)
+
+   @keyframes BtnToUp
+      0%
+         opacity: 0
+         transform: translateY(50px)
+
+      100%
+         opacity: 1
+         transform: translateY(0px)
